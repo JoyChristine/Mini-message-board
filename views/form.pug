@@ -3,11 +3,11 @@ extends layout
 block content 
 
  h1 #{title}
-  form(action ="/new", method ="POST")
+  form(method ="POST" action ="/new")
    span Name:
     input#name(type="text" name="name" placeholder="name")
     br
    span Message:
    input#msg(type="text" name="Message" placeholder="message")
    br
-   button Add Message
+   button Submit Message
