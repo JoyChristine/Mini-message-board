@@ -13,27 +13,35 @@ const messages = [{
         added: new Date()
     }
 ];
+
+
+
+// router.get('/users', (req, res) => {
+//     res.send('Users Page')
+// })
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
     res.render('index', {
         title: 'Mini Message Board',
-        messages,
+        messages: messages
     });
 });
 
-router.get('/new', (req, res, next) => {
+router.get('/new', function(req, res, next) {
     res.render('form', {
         title: 'Add your message'
     });
 });
 
 
-router.post('/new', function(req, res, next) {
-    messages.push({
+router.post('/new', (req, res, next) => {
+    let newMessage = {
         text: req.body.message,
         name: req.body.name,
         added: new Date()
-    });
-    res.redirect('/')
+    }
+    messages.push(newMessage);
+    res.redirect('/');
 });
 module.exports = router;

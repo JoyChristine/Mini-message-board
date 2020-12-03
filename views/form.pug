@@ -1,12 +1,13 @@
 extends layout
 
 block content 
-h1 = Send some messages
-form(action ="/new", method ="post")
-span Name:
-input(type="text" name="name")
-br
-span Message:
-input(type="text"name="Message" placeholder="message")
-br
-button Add Message
+
+ h1 #{title}
+  form(action ="/new", method ="POST")
+   span Name:
+    input#name(type="text" name="name" placeholder="name")
+    br
+   span Message:
+   input#msg(type="text" name="Message" placeholder="message")
+   br
+   button Add Message
