@@ -12,16 +12,7 @@ const messages = [{
         user: "Charles",
         added: new Date()
     },
-    {
-        text: "Good morning!",
-        user: "John",
-        added: new Date()
-    },
-    {
-        text: "Good night!",
-        user: "James",
-        added: new Date()
-    }
+
 ];
 
 
