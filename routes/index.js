@@ -17,9 +17,16 @@ const messages = [{
 router.get('/', function(req, res, next) {
     res.render('index', {
         title: 'Mini Message Board',
-        messages: messages,
+        messages,
     });
 });
+
+router.get('/new', (req, res, next) => {
+    res.render('form', {
+        title: 'Add your message'
+    });
+});
+
 
 router.post('/new', function(req, res, next) {
     messages.push({
@@ -28,5 +35,5 @@ router.post('/new', function(req, res, next) {
         added: new Date()
     });
     res.redirect('/')
-})
+});
 module.exports = router;
