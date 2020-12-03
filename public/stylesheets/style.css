@@ -1,7 +1,7 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: blueviolet;
+    background-color: rgb(193, 193, 199);
 }
 
 a {
@@ -17,7 +17,7 @@ p {
 }
 
 button {
-    background-color: rgb(214, 36, 36);
+    background-color: rgb(158, 137, 137);
     border: none;
     outline: none;
     padding: 0.3rem 0.8rem;
@@ -44,9 +44,15 @@ span {
 #name {
     margin: 30px;
     width: 200px;
+    height: 30px;
 }
 
 #msg {
-    width: 300px;
+    width: 200px;
     height: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

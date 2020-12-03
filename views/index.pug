@@ -4,14 +4,19 @@ block content
   H1 Mini Message Board
   p Start adding new messages!
 
-  button#newmsg(type="button")
+  button(type="button")
      - var url = 'new';
       a(href='/' + url) Add new message
 
+  table
+      tr
+        th Name
+        th Message
+        th Date created
 
-  ul
-   each message ,i in messages
-    li=message.text
-    li=message.user
-    li=message.added
+      each message in messages
+        tr
+          td= message.user
+          td= message.text
+          td= message.added
 
